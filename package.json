@@ -1,0 +1,60 @@
+{
+  "name": "regex-extname",
+  "version": "0.0.0",
+  "description": "Regular expression to capture a filename extension.",
+  "author": {
+    "name": "Athan Reines",
+    "email": "kgryte@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Athan Reines",
+      "email": "kgryte@gmail.com"
+    }
+  ],
+  "scripts": {
+    "test": "mocha",
+    "test-cov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+    "codecov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/codecov/coverage --report lcovonly -- -R spec && cat ./reports/codecov/coverage/lcov.info | codecov && rm -rf ./reports/codecov"
+  },
+  "main": "./lib",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kgryte/regex-extname.git"
+  },
+  "keywords": [
+    "regex",
+    "regexp",
+    "regular",
+    "expression",
+    "string",
+    "path",
+    "capture",
+    "match",
+    "ext",
+    "extname",
+    "file",
+    "filename",
+    "posix",
+    "windows",
+    "win32"
+  ],
+  "bugs": {
+    "url": "https://github.com/kgryte/regex-extname/issues"
+  },
+  "dependencies": {
+    "check-if-windows": "^1.0.0",
+    "regex-extname-posix": "^1.0.0",
+    "regex-extname-windows": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "3.x.x",
+    "codecov.io": "^0.1.5",
+    "istanbul": "^0.3.0",
+    "jshint": "2.x.x",
+    "jshint-stylish": "2.x.x",
+    "mocha": "2.x.x",
+    "proxyquire": "^1.7.2"
+  },
+  "license": "MIT"
+}
